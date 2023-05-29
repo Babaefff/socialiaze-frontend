@@ -37,7 +37,7 @@ const PostWidget = ({
 
 
   const patchLike = async () => {
-    const response = await fetch(`localhost:3001/posts/${postId}/like`, {
+    const response = await fetch(`${process.env.REACT_APP_ENDPOINT}/posts/${postId}/like`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
